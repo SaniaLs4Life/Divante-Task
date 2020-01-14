@@ -1,1 +1,1 @@
-# Divante-Task
+# Opis zadania
