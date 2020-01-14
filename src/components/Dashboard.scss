@@ -1,0 +1,47 @@
+@import '../assets/styles/variables';
+
+.dashboard {
+  width: 95%;
+  margin: auto;
+
+  &__container {
+    display: grid;
+    padding: 20px;
+    grid-gap: $gutter;
+    grid-template-columns: repeat(auto-fill, minmax($minWidth, $maxWidth));
+
+    @media screen and (max-width: 320px) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, $maxWidth));
+    }
+
+    &--card {
+      position: relative;
+      box-shadow: 0 2.8px 2.2px #eee, 0 6.7px 5.3px #eee, 0 12.5px 10px #eee,
+        0 22.3px 17.9px #eee, 0 41.8px 33.4px #eee, 0 100px 80px #eee;
+      img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &__container {
+        padding: 10px;
+        &--card-title {
+          font-weight: bold;
+          letter-spacing: 0.5px;
+        }
+        &--card-text {
+          position: relative;
+          background: white;
+          padding: 15px;
+        }
+        &--card-description {
+          font-size: 12px;
+          color: $light-text;
+        }
+      }
+    }
+  }
+}
