@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { IoIosSearch, IoMdClose } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import './Navbar.scss';
@@ -14,16 +15,16 @@ export default function Navbar() {
     <nav className="navbar">
       <ul className="navbar__container">
         <li className="navbar__logo">
-          <a href="#">LOGO</a>
+          <Link to="/">LOGO</Link>
         </li>
         <li className={`navbar__item ${isActive ? 'active' : ''}`}>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className={`navbar__item ${isActive ? 'active' : ''}`}>
-          <a href="#">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li className={`navbar__item ${isActive ? 'active' : ''}`}>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li className={`navbar__item ${isActive ? 'active' : ''}`}>
           <a href="#">
