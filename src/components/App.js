@@ -5,24 +5,24 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ErrorBoundary from './ErrorBoundry';
 import Navbar from './Navbar';
 import Items from './Items';
-import Cart from './Cart';
 import CardDetail from './CardDetail';
+import About from './About';
+import Contact from './Contact';
 
 // Styles
-import './Dashboard.scss';
+import './Global.scss';
 
 export default function App() {
   return (
     <ErrorBoundary>
       <Router>
         <Navbar />
-        <div className="dashboard__container">
-          <Cart />
-          <Switch>
-            <Route exact path="/" component={Items} />
-            <Route exact path="/detail/:id" component={CardDetail} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={Items} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/detail/:id" component={CardDetail} />
+        </Switch>
       </Router>
     </ErrorBoundary>
   );

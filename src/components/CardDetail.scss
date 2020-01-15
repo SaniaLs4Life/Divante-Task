@@ -49,6 +49,8 @@
         position: relative;
         top: 10px;
         left: 25px;
+        border: none;
+        outline: none;
         color: $white;
         padding: 10px;
         width: 200px;
@@ -58,8 +60,13 @@
         cursor: pointer;
         user-select: none;
 
+        
+
         &:hover {
-            background:  #1fad61;
+          background: $secondary;
+        }
+        &:disabled {
+          background: $disabled;
         }
       }
     }
@@ -69,11 +76,11 @@
 @media screen and (max-width: 1300px) {
   .card-detail__container {
     &--bottom {
-        display: block;
+      display: block;
       &__right {
         &--button {
-            width: 100%;
-            left: 0;
+          width: 100%;
+          left: 0;
         }
       }
     }

@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = merge(common, {
   mode: 'production',
-  entry: './src/index.js',
+  entry: ['@babel/polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

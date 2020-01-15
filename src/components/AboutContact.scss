@@ -1,0 +1,51 @@
+@import '../assets/styles/variables';
+
+.about__container {
+  width: 650px;
+  height: 450px;
+  margin: auto;
+  background: $white;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  box-shadow: 0 2px 5px 0 #ddd;
+
+  text-align: center;
+
+  &--information {
+    &__icon {
+      font-size: 80px;
+      color: $light-blue;
+      margin: 50px 0 15px 0;
+    }
+    &__title {
+      font-size: 24px;
+      font-weight: $main-weight;
+      color: $dark-text;
+    }
+
+    &__description {
+      width: 60%;
+      margin: auto;
+      text-align: left;
+      color: $dark-text;
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+      margin-top: 25px;
+    }
+
+    &__contact {
+      width: 100%;
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+      margin-top: 25px;
+      color: $dark-text;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about__container {
+    width: 95%;
+  }
+}

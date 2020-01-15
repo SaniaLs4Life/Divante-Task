@@ -27,10 +27,49 @@
     border-color: $white;
     min-height: 150px;
     color: $gray;
+    overflow-y: scroll;
+    max-height: 150px;
     font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: $gray;
+      outline: 1px solid slategrey;
+    }
+  }
+
+  &--item {
+    padding: 15px;
+    background: $dark-blue;
+    color: $white;
+    margin-top: 2px;
+    position: relative;
+
+    &__price {
+      color: $accent;
+      font-weight: $main-weight;
+      margin-right: 10px;
+    }
+    &__remove {
+      color: $danger;
+      font-size: 20px;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      cursor: pointer;
+      &:hover {
+        color: $dark-danger;
+      }
+    }
+    &__cart-number {
+      margin-right: 10px;
+    }
   }
   &--description {
     color: $gray;
@@ -38,6 +77,12 @@
     line-height: 1.5;
     letter-spacing: 0.4px;
     margin-bottom: 25px;
+  }
+
+  &--no-item {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
   }
 }
 
