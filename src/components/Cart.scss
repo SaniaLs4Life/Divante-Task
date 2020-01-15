@@ -1,0 +1,49 @@
+@import '../assets/styles/variables';
+
+.cart__container {
+  width: 350px;
+  height: 400px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  margin: 35px 35px 0 0;
+  background: $light-blue;
+
+  &--icon {
+    font-size: 30px;
+    vertical-align: middle;
+    color: $white;
+  }
+
+  &--title {
+    color: $white;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+  &--basket {
+    margin-top: 15px;
+    padding: 15px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    box-sizing: border-box;
+    border-color: $white;
+    min-height: 150px;
+    color: $gray;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--description {
+    color: $gray;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .cart__container {
+    margin: auto;
+    width: 95%;
+  }
+}
