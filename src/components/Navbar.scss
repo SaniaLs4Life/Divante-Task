@@ -1,0 +1,97 @@
+@import '../assets/styles/variables';
+
+/* Navbar styling */
+
+.navbar {
+  background: $background;
+  padding: 5px 30px;
+  border-bottom: 1px solid $gray;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      font-size: 16px;
+      padding: 15px 5px;
+      white-space: nowrap;
+    }
+  }
+  &__logo a {
+    font-weight: unset;
+  }
+
+  &__logo a:hover {
+    text-decoration: none;
+  }
+
+  &__logo a,
+  &__toggle a {
+    font-size: 20px;
+  }
+
+  &__toggle {
+    order: 1;
+  }
+  &__item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+  }
+
+  &__item.active {
+    display: block;
+  }
+}
+a {
+  color: $dark-text;
+  text-decoration: none;
+  font-weight: $main-weight;
+}
+a:hover {
+  color: $light-blue;
+}
+
+/* Tablet menu */
+@media all and (min-width: 600px) {
+  .navbar {
+    &__container {
+      justify-content: center;
+      li {
+          margin-right: 35px;
+      }
+    }
+    &__logo {
+      flex: 1;
+    }
+    &__toggle {
+      flex: 1;
+      text-align: right;
+    }
+    &__toggle {
+      order: 2;
+    }
+  }
+}
+/* Desktop menu */
+@media all and (min-width: 900px) {
+  .navbar {
+    &__item {
+      display: block;
+      width: auto;
+    }
+
+    &__toggle {
+      display: none;
+    }
+
+    &__logo {
+      order: 0;
+    }
+    &__item {
+      order: 1;
+    }
+  }
+}
