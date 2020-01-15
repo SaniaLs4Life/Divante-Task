@@ -10,7 +10,8 @@ module.exports = merge(common, {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'src'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   devServer: {
     historyApiFallback: true,
