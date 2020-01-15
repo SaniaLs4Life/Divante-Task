@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from './Navbar';
+import Dashboard from './Dashboard';
 
 export default function App() {
   return (
     <div>
-      <div>Divante</div>
+      <Navbar />
+      <Dashboard />
     </div>
   );
 }

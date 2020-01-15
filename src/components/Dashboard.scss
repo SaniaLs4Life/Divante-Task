@@ -1,0 +1,14 @@
+.dashboard__container {
+  display: flex;
+  width: 92%;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media all and (max-width: 900px) {
+  .dashboard__container {
+    display: block;
+  }
+}
