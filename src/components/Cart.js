@@ -31,7 +31,7 @@ export default function Cart() {
             Cart {getNumberOfItems(cart)}
           </span>
           {cart.length > 0 && (
-            <span className="cart__container--item__price">
+            <span className="cart__container--item__total">
               Total {getTotal(cart)}
             </span>
           )}

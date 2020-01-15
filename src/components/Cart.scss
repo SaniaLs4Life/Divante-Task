@@ -51,7 +51,7 @@
     margin-top: 2px;
     position: relative;
 
-    &__price {
+    &__price, &__total {
       color: $accent;
       font-weight: $main-weight;
       margin-right: 10px;

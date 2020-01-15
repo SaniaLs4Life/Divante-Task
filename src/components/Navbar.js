@@ -15,7 +15,9 @@ export default function Navbar() {
     <nav className="navbar">
       <ul className="navbar__container">
         <li className="navbar__logo">
-          <Link to="/">LOGO</Link>
+          <Link to="/" data-testid="logo">
+            LOGO
+          </Link>
         </li>
         <li className={`navbar__item ${isActive ? 'active' : ''}`}>
           <Link to="/">Home</Link>
