@@ -4,7 +4,7 @@ const getItemPrice = (cart, id) => {
 
 const getTotal = cart => {
   return addDollarSign(
-    cart && cart.reduce((total, currentValue) => total + currentValue.price, 0)
+    cart.reduce((total, currentValue) => total + currentValue.price, 0)
   );
 };
 

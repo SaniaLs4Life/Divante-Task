@@ -13,7 +13,16 @@ describe('Cypress', () => {
     cy.get('.redirect')
       .eq(0)
       .click();
+      cy.wait(2000);
+    cy.get('.card-detail__container--bottom__right--button').should(
+      'have.text',
+      'Add to Cart'
+    );
     cy.get('.card-detail__container--bottom__right--button').click();
+    cy.get('.card-detail__container--bottom__right--button').should(
+      'have.text',
+      'Added'
+    );
     cy.get('.cart__container--item__cart-number').should(
       'have.text',
       'Cart (1)'
